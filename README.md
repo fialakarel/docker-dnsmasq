@@ -1,5 +1,4 @@
 # dnsmasq
-:toc:
 
 Lightweight Docker image for dnsmasq.
 
