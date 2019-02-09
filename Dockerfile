@@ -11,4 +11,4 @@ RUN apk --no-cache add dnsmasq
 COPY dnsmasq.conf /etc/dnsmasq.conf
 
 # set startup command
-CMD dnsmasq --no-daemon
+ENTRYPOINT dnsmasq --no-daemon
