@@ -1,0 +1,14 @@
+- name: Deploy dnsmasq
+  docker_container:
+    name: dnsmasq
+    image: fialakarel/dnsmasq:latest
+    state: started
+    restart_policy: always
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/machine_id:/etc/machine_id:ro"
+      - "/root/dnsmasq/etc/dnsmasq.conf:/etc/dnsmasq.conf:ro"
+      - "/root/dnsmasq/etc/dnsmasq.d:/etc/dnsmasq.d:ro"
